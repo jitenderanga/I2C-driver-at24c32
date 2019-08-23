@@ -1,0 +1,13 @@
+&i2c2 {
+        status = "okay";
+
+        /*Node for at25c32 eeprom*/
+        at24_eeprom: at24@50 {
+                compatible = "24c32";
+                reg = <0x50>;
+                size = <4096>;          /*4KBytes*/
+                pagesize = <32>;
+                address-width = <12>;   /*In bits*/
+        };
+};
+
